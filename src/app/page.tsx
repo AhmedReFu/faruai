@@ -50,7 +50,7 @@ const {data:session}=authClient.useSession()
       type="password"
       value={password} 
         onChange={(e) => setPassword(e.target.value)} />
-      <Button onClick={onSubmit}>Create User0</Button> 
+      <Button onClick={onSubmit}>Create User</Button> 
        
     </div>
   )
