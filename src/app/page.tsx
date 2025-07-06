@@ -4,6 +4,13 @@ import { Input } from "@/components/ui/input";
 import { authClient } from "@/lib/auth-client";
 import { useState } from "react";
 
+/**
+ * React component for user authentication and registration.
+ *
+ * Displays a registration form for new users or a sign-out option for authenticated users. Handles user sign-up and sign-out actions using the authentication client.
+ *
+ * @returns The rendered authentication UI based on the user's session state.
+ */
 export default function Home() {
 const {data:session}=authClient.useSession()
 
