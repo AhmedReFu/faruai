@@ -8,7 +8,7 @@ import { Alert, AlertTitle } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from "@/components/ui/card";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { FaGoogle, FaGithub } from "react-icons/fa";
+import { FaGithub, FaGoogle } from "react-icons/fa";
 
 
 
@@ -57,11 +57,11 @@ export const SignUpView = () => {
                 , callbackURL: "/"
             }, {
             onSuccess: () => {
-                    setPending(false);
-                    router.push("/")
+                setPending(false);
+                router.push("/")
             },
-                onError: ({ error }) => {
-                    setPending(false);
+            onError: ({ error }) => {
+                setPending(false);
                 setError(error.message)
             }
         });
@@ -207,7 +207,7 @@ export const SignUpView = () => {
                         </form>
                     </Form>
 
-                    <div className="bg-radial from-green-700 to-green-900 relative hidden md:flex flex-col gap-y-4 items-center justify-center">
+                    <div className="bg-radial from-sidebar-accent to-sidebar  relative hidden md:flex flex-col gap-y-4 items-center justify-center">
                         <img src="/logo.svg" alt="Image" className="h-[92px] w-[92px]" />
                         <p className="text-2xl font-semibold text-white">
                             Faru.AI
